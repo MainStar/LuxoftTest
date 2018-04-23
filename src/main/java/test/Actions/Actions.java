@@ -3,7 +3,7 @@ package test.Actions;
 public class Actions {
 
     private static FileActions fileActions;
-    private static TextActions textActions;
+    private static LineActions lineActions;
 
     public static FileActions fileActions(){
         if (fileActions == null){
@@ -12,11 +12,11 @@ public class Actions {
         return fileActions;
     }
 
-    public static TextActions textActions(){
-        if (textActions == null){
-            textActions = new TextActions();
+    public static LineActions lineActions(){
+        if (lineActions == null){
+            lineActions = new LineActions();
         }
-        return textActions;
+        return lineActions;
     }
 
 }

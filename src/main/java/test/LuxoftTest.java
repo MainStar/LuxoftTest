@@ -1,31 +1,38 @@
 package test;
 
 import test.Actions.Actions;
+import test.Dao.jdbc.DBHelper;
 
-import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.sql.SQLException;
 import java.util.*;
 
 public class LuxoftTest {
 
+    private String fileName = "Test.txt";
     private File file;
+    private Map<String, String[]> lineStatistic = new HashMap<>();
     private List<String> lineList;
     
-    public void luxoftTest() throws FileNotFoundException {
+    public void luxoftTest() throws FileNotFoundException, SQLException, ClassNotFoundException {
 
-        //Read from file
-        file = Actions.fileActions().getFile("Test.txt");
+        file = Actions.fileActions().getFile(fileName);
         lineList = Actions.fileActions().readFile(file);
 
         for (String el : lineList){
-            Actions.textActions().findMediane(el);
-            Actions.textActions().findMaxAndMin(el);
-            System.out.println(" ");
-            //System.out.println(Actions.textActions().getLongestLetter());
-            //System.out.println(Actions.textActions().getShortestLetter());
-            //System.out.println(Actions.textActions().getMedianLength(el));
+            Actions.lineActions().findMediane(el);
+            Actions.lineActions().findMaxAndMin(el);
+            String[] statisticMass = {Actions.lineActions().getShortestLetter(), Actions.lineActions().getMedianLength(el), Actions.lineActions().getLongestLetter()};
+            lineStatistic.put(el, statisticMass);
         }
+
+        DBHelper db = new DBHelper();
+        db.connectToDB();
+        db.writeFile(fileName);
+        db.writeLines(lineStatistic, fileName);
+
+        db.close();
 
     }
 }

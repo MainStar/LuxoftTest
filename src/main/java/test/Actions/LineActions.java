@@ -3,12 +3,11 @@ package test.Actions;
 
 import java.util.*;
 
-public class TextActions {
+public class LineActions {
 
     private int min = 0;
     private int max = 0;
-    private int median = 0;
-    private int[][] letersLength;
+    private int totalFrequency = 0;
     private String longestLetter;
     private String shortestLetter;
     private String medianLetter;
@@ -26,40 +25,24 @@ public class TextActions {
     }
 
     public void findMediane(String line){
-        int totalFreeq = 0;
         int index = 0;
         String[] mass = line.split(" ");
-        List<Integer> list = new ArrayList<Integer>();
-        List<Integer> notSorted = new ArrayList<Integer>();
-        for (int i = 0; i < mass.length; i++){
-            int z = getLetterLength(mass[i]);
-            totalFreeq += z;
-            list.add(z);
-            notSorted.add(totalFreeq);
-        }
-        Collections.sort(list);
-        int mid = totalFreeq / 2;
-        findMaxAndMin(line);
-        medianLetter = mass[list.size()/4*3-1];
+
         Map<Integer, String> map = new HashMap<Integer, String>();
         for (int i = 0; i < mass.length; i++){
-            map.put(getLetterLength(mass[i]), mass[i]);
+            index += getLetterLength(mass[i]);
+            totalFrequency += index;
+            map.put(totalFrequency, mass[i]);
         }
         Map<Integer, String> mapSorted = new TreeMap<>(map);
+
+        int g = totalFrequency /2;
         for (Map.Entry<Integer, String> el : mapSorted.entrySet()){
-            int z =+ el.getKey() ;
-            if (z > totalFreeq / 2){
+            if (el.getKey() >= g){
                 break;
             }else {
-                
-            }
-        }
-        for (Map.Entry<Integer, String> el : mapSorted.entrySet()){
-            System.out.println(el.getKey() + " " + el.getValue());
-            /*if (z > totalFreeq/2) {
                 medianLetter = el.getValue();
-                System.out.println(medianLetter);
-            }*/
+            }
         }
     }
 
