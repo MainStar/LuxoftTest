@@ -18,7 +18,6 @@ public class FileActions {
         Scanner in = new Scanner(file);
         while (in.hasNextLine()){
             lineList.add(in.nextLine());
-            //break;
         }
         return lineList;
     }
