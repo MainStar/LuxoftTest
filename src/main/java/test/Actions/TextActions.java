@@ -51,7 +51,7 @@ public class TextActions {
             if (z > totalFreeq / 2){
                 break;
             }else {
-                
+
             }
         }
         for (Map.Entry<Integer, String> el : mapSorted.entrySet()){
