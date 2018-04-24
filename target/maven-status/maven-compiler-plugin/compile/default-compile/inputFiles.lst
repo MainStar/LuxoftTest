@@ -1,11 +1,11 @@
-D:\projects_test\LuxoftTest\src\main\java\test\Actions\Actions.java
-D:\projects_test\LuxoftTest\src\main\java\test\Actions\FileActions.java
-D:\projects_test\LuxoftTest\src\main\java\test\Actions\LineActions.java
-D:\projects_test\LuxoftTest\src\main\java\test\Dao\Hibernate\Service\LineService.java
-D:\projects_test\LuxoftTest\src\main\java\test\rest\Resources\LoadResources.java
-D:\projects_test\LuxoftTest\src\main\java\test\LuxoftTest.java
-D:\projects_test\LuxoftTest\src\main\java\test\Dao\Hibernate\Entities\LinesEntities.java
-D:\projects_test\LuxoftTest\src\main\java\test\Dao\Hibernate\Entities\FileEntity.java
-D:\projects_test\LuxoftTest\src\main\java\test\Dao\jdbc\DBHelper.java
-D:\projects_test\LuxoftTest\src\main\java\Main.java
-D:\projects_test\LuxoftTest\src\main\java\test\rest\Util\RestUrlApi.java
+/home/mainstar/Idea Projects/LuxoftTest/src/main/java/test/LuxoftTest.java
+/home/mainstar/Idea Projects/LuxoftTest/src/main/java/test/Actions/FileActions.java
+/home/mainstar/Idea Projects/LuxoftTest/src/main/java/test/Dao/Hibernate/Entities/LinesEntities.java
+/home/mainstar/Idea Projects/LuxoftTest/src/main/java/test/Dao/Hibernate/Service/LineService.java
+/home/mainstar/Idea Projects/LuxoftTest/src/main/java/Main.java
+/home/mainstar/Idea Projects/LuxoftTest/src/main/java/test/Actions/LineActions.java
+/home/mainstar/Idea Projects/LuxoftTest/src/main/java/test/Actions/Actions.java
+/home/mainstar/Idea Projects/LuxoftTest/src/main/java/test/rest/Resources/LoadResources.java
+/home/mainstar/Idea Projects/LuxoftTest/src/main/java/test/Dao/Hibernate/Entities/FileEntity.java
+/home/mainstar/Idea Projects/LuxoftTest/src/main/java/test/Dao/jdbc/DBHelper.java
+/home/mainstar/Idea Projects/LuxoftTest/src/main/java/test/rest/Util/RestUrlApi.java

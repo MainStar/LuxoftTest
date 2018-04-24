@@ -3,6 +3,8 @@ package test.rest.Resources;
 import test.Dao.Hibernate.Entities.LinesEntities;
 import test.Dao.Hibernate.Service.LineService;
 
+import javax.ws.rs.Consumes;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -17,8 +19,9 @@ public class LoadResources {
     private LineService lineService = new LineService();
     private List<LinesEntities> linesList;
 
+    @POST
     @Path(value = "/statistic")
-    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
     public Response getStatistic(){
         linesList = lineService.getAllLines();
         return Response.status(Response.Status.OK).entity(generateAnswer(linesList)).build();

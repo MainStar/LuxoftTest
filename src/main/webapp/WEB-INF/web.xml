@@ -14,5 +14,10 @@
         <servlet-name>main</servlet-name>
         <jsp-file>/resources/pages/index.html</jsp-file>
     </servlet>
+    
+    <mime-mapping>
+        <extension>css</extension>
+        <mime-type>text/css</mime-type>
+    </mime-mapping>
 
 </web-app>
