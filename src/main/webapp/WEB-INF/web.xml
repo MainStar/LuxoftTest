@@ -4,4 +4,15 @@
 
 <web-app>
     <display-name>Archetype Created Web Application</display-name>
+
+    <servlet-mapping>
+        <servlet-name>main</servlet-name>
+        <url-pattern></url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>main</servlet-name>
+        <jsp-file>/resources/pages/index.html</jsp-file>
+    </servlet>
+
 </web-app>
