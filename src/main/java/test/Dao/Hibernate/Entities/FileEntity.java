@@ -1,4 +1,4 @@
-package test.Dao.Entities;
+package test.Dao.Hibernate.Entities;
 
 import javax.persistence.*;
 import java.util.HashSet;

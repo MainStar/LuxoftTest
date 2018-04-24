@@ -13,7 +13,7 @@ public class DBHelper {
 
     public static void connectToDB() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
-        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test_lux", "root", "admin");
+        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test_lux", "root", "root");
         System.out.println("Data base is connected!");
     }
 
