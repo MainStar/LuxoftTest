@@ -13,13 +13,13 @@ public class DBHelper {
 
     public static void connectToDB() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
-        connection = DriverManager.getConnection("JDBC:mysql://localhost:3306/test_lux", "root", "admin");
+        connection = DriverManager.getConnection("JDBC:mysql://localhost:3306/test_lux", "root", "root");
         System.out.println("Data base is connected!");
     }
 
     public void writeFile(String fileName) throws SQLException {
         System.out.println(id);
-        preparedStat = connection.prepareStatement("insert into files (file_name) VALUES (?)");
+        preparedStat = connection.prepareStatement("insert into files (name) VALUES (?)");
         preparedStat.setString(1, fileName);
         preparedStat.executeUpdate();
         id++;
@@ -28,7 +28,7 @@ public class DBHelper {
     public int getFileId(String name) throws SQLException {
         int id = 0;
         statement = connection.createStatement();
-        resultSet = statement.executeQuery("SELECT id FROM files WHERE file_name");
+        resultSet = statement.executeQuery("SELECT id FROM files WHERE name");
         while (resultSet.next()){
             if (resultSet.getString(2).equals(name)) {
                 id = resultSet.getInt("id");
