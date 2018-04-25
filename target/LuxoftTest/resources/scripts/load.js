@@ -1,8 +1,6 @@
-function loadFile(){
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', "http://localhost:8080/LuxoftTest/api/loadFile/statistic", true);
-    xhr.send();
-    xhr.onload = function(){
-        alert(xhr.Text);
-    }
+var xhr = new XMLHttpRequest();
+xhr.open('POST', 'api/loadFile/statistic', true);
+xhr.onload = function(){
+     alert(xhr.responseText);
 }
+xhr.send();

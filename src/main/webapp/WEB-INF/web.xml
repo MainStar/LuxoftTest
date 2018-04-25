@@ -12,7 +12,7 @@
 
     <servlet>
         <servlet-name>main</servlet-name>
-        <jsp-file>/resources/pages/index.html</jsp-file>
+        <jsp-file>/resources/Pages/index.html</jsp-file>
     </servlet>
     
     <mime-mapping>

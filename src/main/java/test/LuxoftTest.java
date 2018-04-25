@@ -1,7 +1,7 @@
 package test;
 
 import test.Actions.Actions;
-import test.Dao.jdbc.DBHelper;
+import test.Dao.JDBC.DBHelper;
 
 import java.io.File;
 import java.io.FileNotFoundException;
